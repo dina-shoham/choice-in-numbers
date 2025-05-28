@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import '../styles/globals.css';
 
 interface InputProps {
   InputText: string;
   OnChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  Colour: 'black' | 'white' | 'accent-dark' | 'accent-light';
 }
 
 export default function Input({ InputText, OnChange }: InputProps): React.JSX.Element {
