@@ -6,6 +6,8 @@
   --accent-dark: #09631E;
   --accent-light: #88B492;
   --white: #ffffff;
+  --grey-dark: #6b6b6b;
+  --grey-light: #cecece;
 }
 
 @theme inline {
@@ -14,6 +16,8 @@
   --color-accent-dark: var(--accent-dark);
   --color-accent-light: var(--accent-light);
   --color-white: var(--white);
+  --color-grey-dark: var(--grey-dark);
+  --color-grey-light: var(--grey-light);
   --font-sans: "Helvetica";
 }
 
