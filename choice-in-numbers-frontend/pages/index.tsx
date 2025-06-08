@@ -4,7 +4,8 @@ import InputBlack from '../components/InputBlack';
 import InputAccentColour from '../components/InputAccentColour';
 import { useState } from 'react';
 import Select from '../components/Select';
-import Chevron from '../components/Chevron';
+import Postcard from '../components/Postcard';
+import { Address } from '../types/Address';
 
 const Home: NextPage = () => {
 
@@ -21,10 +22,28 @@ const Home: NextPage = () => {
     const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
       setSelected(event.target.value);
     };
+
+    const senderAddress: Address = {
+      name: "Jane Doe",
+      streetAddress: "123 Main St",
+      city: "Toronto",
+      stateOrProvince: "ON",
+      zipCode: "M5J 2N1",
+      country: "Canada"
+    };
+
+    const recipientAddress: Address = {
+      name: "John Doe",
+      streetAddress: "123 Rue Main",
+      city: "Montreal",
+      stateOrProvince: "QC",
+      zipCode: "H2X 2H2",
+      country: "Canada"
+    };
   
 
   return (
-    <div> 
+    <div className="p-4"> 
       <h1>Home</h1>
         <div>
           <Button ButtonText="Click Me" OnClick={() => console.log("clicked")} />
@@ -40,6 +59,9 @@ const Home: NextPage = () => {
                   Options={['Option 1', 'Option 2', 'Option 3']}
                   OnChange={handleSelectChange}>
           </Select>
+        </div>
+        <div>
+          <Postcard Sender={senderAddress} Recipient={recipientAddress} Message="my message"></Postcard>
         </div>
     </div>
   );
