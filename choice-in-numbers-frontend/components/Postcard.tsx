@@ -26,7 +26,10 @@ export default function Postcard({Sender, Recipient, Message}: InputProps): Reac
             </div>
             {/* right side */}
             <div className="flex-50 pl-4">
-                <div className="h-40"></div>
+                <div className="flex flex-row-reverse p-2">
+                    <div className="border w-10 h-12 self-end"></div>
+                </div>
+                <div className="h-20"></div>
                 <div className="border-b w-50"><p>{Recipient.name}</p></div>
                 <div className="border-b w-50 pt-1"><p>{Recipient.streetAddress}</p></div>
                 <div className="border-b w-50 pt-1"><p>{Recipient.city}, {Recipient.stateOrProvince}</p></div>
