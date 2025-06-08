@@ -10,7 +10,7 @@ export default function NavBar(): React.JSX.Element {
   const [showAbout, setShowAbout] = useState(false);
 
   return (
-    <nav className="bg-white flex gap-2 relative items-center p-2">
+    <nav className="bg-white flex gap-2 relative items-center p-2 pr-4">
       {/* title and logo */}
       <Link href="/" className='font-bold text-base text-accent-dark flex flex-row items-center gap-2'>
         <Image src={logo} alt="Logo" className="h-12 w-14" />
@@ -75,9 +75,6 @@ export default function NavBar(): React.JSX.Element {
             )}
           </div>
         </div>
-
-        <div className="w-2"></div>
-
       </div>
     </nav>
   );

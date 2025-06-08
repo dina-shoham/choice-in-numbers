@@ -63,6 +63,7 @@ const Home: NextPage = () => {
         <div>
           <Postcard Sender={senderAddress} Recipient={recipientAddress} Message="my message"></Postcard>
         </div>
+        <div className="h-100"></div>
     </div>
   );
 };
