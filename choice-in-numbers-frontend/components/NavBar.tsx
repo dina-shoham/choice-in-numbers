@@ -3,8 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react';
 import '../styles/globals.css';
 import logo from '../resources/logo.png';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Chevron from '../components/Chevron';
 
 export default function NavBar(): React.JSX.Element {
   const [showTakeAction, setShowTakeAction] = useState(false);
@@ -29,8 +28,10 @@ export default function NavBar(): React.JSX.Element {
           onMouseEnter={() => setShowTakeAction(true)}
           onMouseLeave={() => setShowTakeAction(false)}
         >
-          <span className="cursor-pointer font-bold text-accent-dark">Take Action</span>
-          { showTakeAction ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          <span className="cursor-pointer font-bold text-accent-dark inline-flex gap-1">
+            Take Action
+            { showTakeAction ? <Chevron Color="accent-dark" Orientation='up' /> : <Chevron Color="accent-dark" Orientation='down' />}
+          </span>
           <div className="absolute right-0"
             onMouseEnter={() => setShowTakeAction(true)}
             onMouseLeave={() => setShowTakeAction(false)}
@@ -56,8 +57,10 @@ export default function NavBar(): React.JSX.Element {
           onMouseEnter={() => setShowAbout(true)}
           onMouseLeave={() => setShowAbout(false)}
         >
-          <span className="cursor-pointer font-bold text-accent-dark">About Us</span>
-          { showAbout ? <ExpandLessIcon className="fill-accent-dark"/> : <ExpandMoreIcon />}
+          <span className="cursor-pointer font-bold text-accent-dark inline-flex gap-1">
+            About Us
+            { showAbout ? <Chevron Color="accent-dark" Orientation='up' /> : <Chevron Color="accent-dark" Orientation='down' />}
+          </span>
           
           <div className="absolute right-0"
             onMouseEnter={() => setShowAbout(true)}

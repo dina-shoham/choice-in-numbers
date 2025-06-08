@@ -19,12 +19,16 @@ export default function Chevron({Color, Orientation}: InputProps): React.JSX.Ele
         }
     }
 
+    function formatColor(color: string): string {
+        return "var(--" + color + ")";
+    }
+
     return (
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" viewBox="0 0 24 24" 
             strokeWidth="1.5" 
-            stroke={Color} 
+            stroke={formatColor(Color)}
             height="18"
             cursor="pointer"
             transform={getRotation(Orientation)}
