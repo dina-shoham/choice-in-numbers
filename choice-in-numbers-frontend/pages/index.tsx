@@ -4,6 +4,7 @@ import InputBlack from '../components/InputBlack';
 import InputAccentColour from '../components/InputAccentColour';
 import { useState } from 'react';
 import Select from '../components/Select';
+import Chevron from '../components/Chevron';
 
 const Home: NextPage = () => {
 
