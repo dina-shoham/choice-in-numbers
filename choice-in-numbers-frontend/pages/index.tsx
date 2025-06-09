@@ -5,6 +5,7 @@ import InputAccentColour from '../components/InputAccentColour';
 import { useState } from 'react';
 import Select from '../components/Select';
 import Postcard from '../components/Postcard';
+import Card from '../components/Card';
 import { Address } from '../types/Address';
 
 const Home: NextPage = () => {
@@ -45,25 +46,20 @@ const Home: NextPage = () => {
   return (
     <div className="p-4"> 
       <h1>Home</h1>
-        <div>
+        <Card>
           <Button ButtonText="Click Me" OnClick={() => console.log("clicked")} />
-        </div>
-        <div>
           <InputBlack InputText={inputText} OnChange={handleInputChange} />
-        </div>
-        <div>
           <InputAccentColour InputText="Type Here" OnChange={() => console.log("typing")} />
-        </div>
-        <div>
           <Select Placeholder='Select an option'
                   Options={['Option 1', 'Option 2', 'Option 3']}
                   OnChange={handleSelectChange}>
           </Select>
-        </div>
+        </Card>
+        
         <div>
           <Postcard Sender={senderAddress} Recipient={recipientAddress} Message="my message"></Postcard>
         </div>
-        <div className="h-100"></div>
+        {/* <div className="h-100"></div> */}
     </div>
   );
 };
