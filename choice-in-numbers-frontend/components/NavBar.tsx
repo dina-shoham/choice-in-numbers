@@ -37,7 +37,7 @@ export default function NavBar(): React.JSX.Element {
             onMouseLeave={() => setShowTakeAction(false)}
           >
           {showTakeAction && (
-            <div className="bg-grey-pale shadow-md mt-2 p-2 flex flex-col w-48">
+            <div className="bg-grey-pale shadow-md mt-2 p-2 flex flex-col w-36">
               <Link href="/take-action/send-postcard">Send a Postcard</Link>
               <Link href="/take-action/submit-testimonial">Submit a Testimonial</Link>
               <Link href="/take-action/donate">Donate</Link>
@@ -67,7 +67,7 @@ export default function NavBar(): React.JSX.Element {
             onMouseLeave={() => setShowAbout(false)}
             >
             {showAbout && (
-              <div className="bg-grey-pale shadow-md mt-2 p-2 flex flex-col w-48">
+              <div className="bg-grey-pale shadow-md mt-2 p-2 flex flex-col w-36">
                 <Link href="/about/about">Our Mission</Link>
                 <Link href="/about/contact">Contact Us</Link>
                 <Link href="/about/join">Join Us</Link>

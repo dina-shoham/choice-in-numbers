@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 
 const SubmitTestimonial: NextPage = () => {
-  return <h1>Submit a Testimonial</h1>;
-};
+return (
+    <div className="p-4 m-4"> 
+      <h1>Submit a testimonial</h1>
+    </div>
+  )};
 export default SubmitTestimonial;
