@@ -10,7 +10,7 @@ export default function Input({ InputText, OnChange }: InputProps): React.JSX.El
         <input
             type="text"
             placeholder={InputText}
-            className="border-b-2 border-accent-dark focus:outline-none focus:border-accent-light text-black placeholder:text-grey-dark"
+            className="border-b-1 border-accent-dark focus:outline-none focus:border-accent-light text-black placeholder:text-grey-dark"
             onChange={OnChange}
         />
     );

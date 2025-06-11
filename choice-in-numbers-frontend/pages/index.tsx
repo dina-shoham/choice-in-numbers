@@ -8,6 +8,7 @@ import Postcard from '../components/Postcard';
 import Card from '../components/Card';
 import { Address } from '../types/Address';
 import '../styles/globals.css'
+import TextArea from '../components/TextArea';
 
 const Home: NextPage = () => {
 
