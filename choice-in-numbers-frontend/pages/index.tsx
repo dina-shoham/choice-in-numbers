@@ -49,7 +49,7 @@ const Home: NextPage = () => {
   return (
     <div className="p-4 m-4 gap-4 flex flex-col items-center"> 
       <h1>Home</h1>
-      <div className="w-260">
+      {/* <div className="w-260">
         <CarouselCustom>
           <div className="embla__slide p-4">
             <Postcard
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
             Message="3333333333333333333333333. This is postcard 3, three of three"/>
           </div>
         </CarouselCustom>
-      </div>
+      </div> */}
     </div>
   );
 };
