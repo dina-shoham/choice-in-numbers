@@ -33,3 +33,15 @@ h1 {
   font-size: medium;
   color: var(--accent-dark)
 }
+
+/* embla carousel styles */
+.embla {
+ overflow: hidden;
+}
+.embla__container {
+ display: flex;
+}
+.embla__slide {
+ flex: 0 0 auto;
+ width: 80%;
+}
