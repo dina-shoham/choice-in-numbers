@@ -36,12 +36,19 @@ h1 {
 
 /* embla carousel styles */
 .embla {
- overflow: hidden;
+  overflow: hidden;
 }
+
 .embla__container {
- display: flex;
+  display: flex;
 }
+
 .embla__slide {
- flex: 0 0 auto;
- width: 100%;
+  flex: 0 0 auto;
+  width: 50%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.embla__slide:not(.is-snapped) {
+  opacity: 0.5;
 }

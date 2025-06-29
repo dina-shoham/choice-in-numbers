@@ -1,10 +1,21 @@
 import '../styles/globals.css';
 import React, { ReactNode, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import ClassNames from 'embla-carousel-class-names';
 import Chevron from './Chevron';
 
-export default function CarouselCustom (): React.JSX.Element {
-  const [emblaRef, emblaApi] = useEmblaCarousel()
+/* TO USE:
+the width is a little wonky so stick the <CarouselCustom> inside a div and fiddle with the width until it looks right :/
+for a postcard carousel a 260 ish px width works well
+guess and check for other stuff!
+*/
+
+type CarouselProps = {
+  children: ReactNode;
+};
+
+export default function CarouselCustom ({ children }: CarouselProps): React.JSX.Element {
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true}, [ClassNames()]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -18,17 +29,19 @@ export default function CarouselCustom (): React.JSX.Element {
 
   return (
      <div className="embla" ref={emblaRef}>
-      <div className="embla__container gap-4">
-        <div className="embla__slide bg-accent-dark p-4">Slide 1</div>
-        <div className="embla__slide bg-accent-light p-4">Slide 2</div>
-        <div className="embla__slide bg-grey-dark p-4">Slide 3</div>
+      <div className="embla__container">
+        {children}
       </div>
-       <button className="embla__prev" onClick={scrollPrev}>
+
+      {/* nav */}
+      <div className='flex justify-center p-4'>
+       <button onClick={scrollPrev}>
         <Chevron Color="accent-dark" Orientation='left' />
       </button>
-      <button className="embla__next" onClick={scrollNext}>
+      <button onClick={scrollNext}>
         <Chevron Color="accent-dark" Orientation='right' />
       </button>
+      </div>
     </div>
   );
 }

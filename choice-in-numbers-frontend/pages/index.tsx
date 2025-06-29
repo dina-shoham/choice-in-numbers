@@ -49,20 +49,28 @@ const Home: NextPage = () => {
   return (
     <div className="p-4 m-4 gap-4 flex flex-col items-center"> 
       <h1>Home</h1>
-      <CarouselCustom>
-        {/* <Postcard
-          Sender={senderAddress}
-          Recipient={recipientAddress}
-          Message="111111111111111111111111. This is postcard 1, one of three"/>
-          <Postcard
-          Sender={senderAddress}
-          Recipient={recipientAddress}
-          Message="222222222222222222222222. This is postcard 2, two of three"/>
-          <Postcard
-          Sender={senderAddress}
-          Recipient={recipientAddress}
-          Message="3333333333333333333333333. This is postcard 3, three of three"/> */}
-      </CarouselCustom>
+      <div className="w-260">
+        <CarouselCustom>
+          <div className="embla__slide p-4">
+            <Postcard
+            Sender={senderAddress}
+            Recipient={recipientAddress}
+            Message="111111111111111111111111. This is postcard 1, one of three"/>
+          </div>
+          <div className="embla__slide p-4">
+            <Postcard
+            Sender={senderAddress}
+            Recipient={recipientAddress}
+            Message="222222222222222222222222. This is postcard 2, two of three"/>
+          </div>
+          <div className="embla__slide p-4">
+            <Postcard
+            Sender={senderAddress}
+            Recipient={recipientAddress}
+            Message="3333333333333333333333333. This is postcard 3, three of three"/>
+          </div>
+        </CarouselCustom>
+      </div>
     </div>
   );
 };
