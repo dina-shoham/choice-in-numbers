@@ -1,14 +1,17 @@
 import { AppProps } from 'next/app';
 import NavBar from '../components/NavBar';
-import '../styles/globals.css'
+import Footer from '../components/Footer';
 
-export default function MyApp({ Component, pageProps }: AppProps): React.JSX.Element {
+export default function MyApp({ Component, pageProps }: AppProps): React.JSX.Element {  
   return (
     <>
-      <NavBar />
-      <main>
-        <Component {...pageProps} />
-      </main>
+      <div className="min-h-screen flex flex-col">
+        <NavBar />
+        <main className="flex-1">
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }
