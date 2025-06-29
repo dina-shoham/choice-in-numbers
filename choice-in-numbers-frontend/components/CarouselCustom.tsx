@@ -17,18 +17,18 @@ export default function CarouselCustom (): React.JSX.Element {
   }, [emblaApi])
 
   return (
-      <div className="embla w-8/10" ref={emblaRef}>
-        <div className="embla__container gap-4">
-          <div className="embla__slide bg-accent-dark p-4">Slide 1</div>
-          <div className="embla__slide bg-accent-light p-4">Slide 2</div>
-          <div className="embla__slide bg-grey-dark p-4">Slide 3</div>
-        </div>
-        <button className="embla__prev" onClick={scrollPrev}>
-          <Chevron Color="accent-dark" Orientation='left' />
-        </button>
-        <button className="embla__next" onClick={scrollNext}>
-          <Chevron Color="accent-dark" Orientation='right' />
-        </button>
+     <div className="embla" ref={emblaRef}>
+      <div className="embla__container gap-4">
+        <div className="embla__slide bg-accent-dark p-4">Slide 1</div>
+        <div className="embla__slide bg-accent-light p-4">Slide 2</div>
+        <div className="embla__slide bg-grey-dark p-4">Slide 3</div>
       </div>
+       <button className="embla__prev" onClick={scrollPrev}>
+        <Chevron Color="accent-dark" Orientation='left' />
+      </button>
+      <button className="embla__next" onClick={scrollNext}>
+        <Chevron Color="accent-dark" Orientation='right' />
+      </button>
+    </div>
   );
 }
